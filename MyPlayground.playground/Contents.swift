@@ -74,17 +74,20 @@ var randomNumber2 = Double.random(in: 1...3)
 
 //string concatenation = "a" + "b"
 
+//Deep Dive #4 functions
+//function declaration
+func greeting() {
+        print("Hey!")
+}
 
+//function calling
+greeting()
 
-   let alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-   
-let firstLetter = alphabet[Int.random(in: 0..<alphabet.count)]
-   let secondLetter = alphabet[Int.random(in: 0..<alphabet.count)]
-   let thirdLetter = alphabet[Int.random(in: 0..<alphabet.count)]
-   let fourthLetter = alphabet[Int.random(in: 0..<alphabet.count)]
-   let fifthLetter = alphabet[Int.random(in: 0..<alphabet.count)]
-   let sixthLetter = alphabet[Int.random(in: 0..<alphabet.count)]
-   
-   let password = firstLetter + secondLetter + thirdLetter + fourthLetter + fifthLetter + sixthLetter
-   
-   print(password)
+//scope = when a function is can be accessible or can be used
+
+//IB = Interface Builder
+
+//Deep Dove #5  functions with inputs and type inference
+func getMilk(bottles: Int) {
+    var cost = bottles * 1.5
+}
