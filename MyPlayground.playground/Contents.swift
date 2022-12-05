@@ -123,3 +123,54 @@ default:
 
 //Deep Dive #9 - optionals ?!
 
+//Deep Dive #10 - structures(help us create custom data types)
+//struct = blueprint of the object
+struct Town {
+    //variables inside of a struct is called "properties"
+    let name: String
+    var citizens: [String]
+    var resources: [String: Int]
+    
+    //init() function
+    init(townName: String, people: [String], stats: [String: Int]) {
+        self.name = townName
+        citizens = people
+        resources = stats
+    }
+    
+    //function inside of a struct is called a "method"
+    func forfity() {
+        print("Defences increased!")
+    }
+}
+
+//initializing struct(create & use)
+var myTown = Town(townName: "Nameless Island", people: ["Tom Hanks"], stats: ["Coconuts": 100])
+print("\(myTown.name) has \(myTown.resources["Grain"]!) bags of grain. ")
+
+myTown.citizens.append("Keanu Reeves")
+print(myTown.citizens.count)
+
+myTown.forfity()
+
+//self refers to the eventual object that will be created from the structure blueprint
+
+//Design Patterns
+//MVC - Model-View-Controller
+//Model -> Data & Logic, View -> UI, Controller -> Mediator
+
+//modeli olusturmak icin kodun tum veri isleyen kisimlari ve bu verilerle islem yapma mantigini ayiririz.
+//view kullanici arayuzune giden & kullanici etkilsimiyle ilgilenen kodumuzun parcalaridir.
+//controller araciligiyla view ve model birbirleriyle iletisim kurarlar, asla direkt iletisimleri yoktur, controller araciliyigla haberlesirler. Controller araciligiyla model'e request yapilir ve model request edilen data'yi isler ve controller'e geri gonderir, ve controller da bunu en son view'e gonderir.
+
+//fonksiyona giden parametre = argument
+
+//Deep Dive #11 - Functions with outputs & return types
+func getMilk(money: Int) -> Int {
+    let change = money - 2
+    return change
+}
+
+//Deep Dive #12 - Immutability
+//bir structure'i let keyword'u ile yaratirsak(init edersek( structrure immutable(degistirilemez) olur, bu yuzden struct'in icindeki tum metodlari & propertyleri de immutable olur; bunlari degistirebilmek icin basina mutating keyword'u yazilir.
+
