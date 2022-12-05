@@ -87,7 +87,39 @@ greeting()
 
 //IB = Interface Builder
 
-//Deep Dove #5  functions with inputs and type inference
+//Deep Dive #5 - functions with inputs and type inference
 func getMilk(bottles: Int) {
-    var cost = bottles * 1.5
+    var cost = bottles * 2
 }
+
+//Deep Dive #6 - if-else control flow
+func loveCalculator() {
+    let loveScore = Int.random(in: 0...100)
+    
+    if loveScore > 80 {
+        print("You love each other like Kanye loves Kanye.")
+    } else if loveScore > 40 && loveScore < 80 {
+        print("You go together like Coke and Mentos.")
+    } else {
+        print("You'll be 4ever alone :/")
+    }
+}
+
+loveCalculator()
+
+//Deep Dive #7 - Switch statement
+let loveScore = Int.random(in: 0...100)
+
+switch loveScore {
+case 81...100:
+    print("You love each other like Kanye loves Kanye.")
+case 40...80:
+    print("You go together like Coke and Mentos.")
+default:
+    print("You'll be 4ever alone :/")
+}
+
+//Deep Dive #8 - Dictionaries
+
+//Deep Dive #9 - optionals ?!
+
